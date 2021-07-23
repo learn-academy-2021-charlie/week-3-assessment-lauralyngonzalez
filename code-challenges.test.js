@@ -1,5 +1,7 @@
 // ASSESSMENT 3: Coding practical questions with Jest
 
+const { expect } = require("@jest/globals")
+
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
 // If you get stuck, please leave comments to help us understand your thought process
@@ -30,8 +32,11 @@ var out2 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
 describe("Fibonacci function", () => {
     it("Returns an array containing the Fibonacci numbers up to the given length", () => {
-        expect(fib(in1)).toEqual(out1)
+        expect(fib(in1)).toEqual(out1)  // uses a for loop
         expect(fib(in2)).toEqual(out2)
+
+        expect(fibMap(in1)).toEqual(out1)   // uses map
+        expect(fibMap(in2)).toEqual(out2)
     })
 })
 
@@ -58,12 +63,21 @@ const fib = (length) => {
     return fib
 }
 
-// Trying out reduce... get back to this later!
-const fibReduce = (length) => {
-    let fib = [1, 1]
-    console.log(fib.reduce((acc, val) => acc + val))
+// Gets Fibonacci sequence using map() and fill().
+// (Just wanted to try this out...)
+// Array is filled with 1 up to length-2 because we are changing the element
+// two indices over from the current index.
+const fibMap = (length) => {
+    let fib = Array(length-2).fill(1) // fill an array of length with 1
+
+    // map through array to get next sum of sequence
+    fib.map((val, i, arr) => {
+        return arr[i+2] = arr[i] + arr[i+1]    
+    })
+    
+    return fib
 }
-fibReduce(6)
+
 
 // --------------------2) Create a function that takes in an array and returns a new array of only odd numbers sorted from least to greatest.
 
@@ -154,3 +168,4 @@ const accumulatingSumArr = (arr) => {
     }
     return accSum
 }
+
