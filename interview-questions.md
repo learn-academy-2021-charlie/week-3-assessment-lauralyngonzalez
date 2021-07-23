@@ -9,7 +9,9 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. What is `this` in JavaScript?
 
-  Your answer:
+  Your answer: this is a reference to the current instance of the object or class.
+  We can use this to get the functions or attributes that the class provided for
+  that particular object.
 
   Researched answer:
 
@@ -17,7 +19,9 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 2. What is yarn? What file(s) are modified in a React application when you run yarn?
 
-  Your answer:
+  Your answer: Yarn is a package manager. Node modules are installed and added with
+  a script. I'm not sure which files are modified but I'm guessing that our App or
+  Test files are modified with some import statements to run them.
 
   Researched answer:
 
@@ -25,7 +29,10 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 3. What are props in React?
 
-  Your answer:
+  Your answer: Props are components that do not have logic or state in them.
+  I think they are mainly for displaying data or sending data back up to the
+  main app where the logic resides. Props are called using the attributes
+  when making a component call.
 
   Researched answer:
 
@@ -33,7 +40,8 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 4. What is JSX?
 
-  Your answer:
+  Your answer: JSX is JavaScript XML. It allows us to use HTML and XML code to create
+  dynamic user interfaces with JavaScript.
 
   Researched answer:
 
@@ -41,7 +49,8 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 5. What is a DOM event?
 
-  Your answer:
+  Your answer: DOM events are actions done on a user interface. Actions can be
+  keyboard input, mouse clicks, or any other change made by a user or other program.
 
   Researched answer:
 
@@ -49,7 +58,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 6. STRETCH: What is an anonymous function in JavaScript?
 
-  Your answer:
+  Your answer: I think anonymous functions are functions defined with the arrow function =>. They aren't explicitly defined with the function keyword from JavaScript.
 
   Researched answer:
 
