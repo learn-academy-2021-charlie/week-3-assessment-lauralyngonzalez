@@ -55,6 +55,7 @@
               <Card
                 drawCard={this.drawCard}
                 shuffle={this.shuffle}
+                hand= {this.state.hand}     // need to pass hand prop
               />
             </>
           )
@@ -77,12 +78,26 @@
             margin: "10px",
             padding: "10px"
           }
+
+          /* 
+          Errors:
+          1) use onClick={ () => this.props.drawCard() }
+          To draw the card. Must make it a function otherwise it's
+          immediately invoked. Prop for drawCard function was passed in.
+
+          2) use onClick={ () => this.props.shuffle()}
+          Same as above but for shuffle()
+
+          3) this.props.hand was not passed as a prop when
+          making the Card component from App.
+          */
+
           return(
             <>
-              <button onClick={}>
+              <button onClick={ () => this.props.drawCard()}>
                 Click to Draw a Card
               </button>
-              <button onClick={shuffle}>
+              <button onClick={ () => this.props.shuffle()}>
                 Return Cards and Shuffle Deck
               </button>
               <div style={handStyles}>
